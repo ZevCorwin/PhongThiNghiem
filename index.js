@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     listItem.forEach(el => {
         const item = document.createElement('div');
         item.style.width = "260px";
-        item.style.margin = "10px";  // Reduced margin for closer items
+        item.style.margin = "10px";  
         item.style.border = "1px solid #eee";
         item.style.borderRadius = "10px";
         item.style.overflow = "hidden";
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const img = document.createElement('img');
         img.src = el.imageURL;
         img.style.width = "100%";
-        img.style.height = "240px"; // Adjusted height
+        img.style.height = "240px"; 
         img.style.objectFit = "cover";
 
         const name = document.createElement('p');
@@ -75,17 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
         button.style.margin = "5px";
         button.style.padding = "10px";
         button.style.border = "none";
-        button.style.borderRadius = "5px"; // Normal rounded corners
+        button.style.borderRadius = "5px"; 
         button.style.cursor = "pointer";
         button.style.backgroundColor = bgColor;
         button.style.color = "white";
         button.style.transition = "background-color 0.3s, transform 0.2s, box-shadow 0.2s, border-radius 0.2s";
 
         button.onmouseover = function() {
-            button.style.backgroundColor = "#9b59b6"; // More vibrant focus color
+            button.style.backgroundColor = "#9b59b6"; 
             button.style.transform = "scale(1.1)";
             button.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
-            button.style.borderRadius = "20px"; // Rounded corners when focused
+            button.style.borderRadius = "20px"; 
         };
         button.onmouseout = function() {
             button.style.backgroundColor = bgColor;
