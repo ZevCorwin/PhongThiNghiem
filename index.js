@@ -1,12 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
     const listItem = [
-        { imageURL: "IMG/phuongcongnguyen.jpg", name: "Nguyên Bần Hèn (Hạ)", price: 500, des: "Mo ta san pham" },
-        { imageURL: "IMG/phuongcongnguyen.jpg", name: "San pham 2", price: 1000, des: "Mo ta san pham" },
-        { imageURL: "IMG/phuongcongnguyen.jpg", name: "San pham 3", price: 1500, des: "Mo ta san pham" },
-        { imageURL: "IMG/phuongcongnguyen.jpg", name: "San pham 4", price: 50, des: "Mo ta san pham" },
-        { imageURL: "IMG/phuongcongnguyen.jpg", name: "San pham 4", price: 50, des: "Mo ta san pham" }
+        { 
+            imageURL: "IMG/phuongcongnguyen.jpg", 
+            name: "Nguyên Bần Hèn (Hạ)", 
+            price: 500, 
+            des: "Mo ta san pham" 
+        },
+        { 
+            imageURL: "IMG/phuongcongnguyen.jpg", 
+            name: "San pham 2", price: 1000, 
+            des: "Mo ta san pham" 
+        },
+        { 
+            imageURL: "IMG/phuongcongnguyen.jpg", 
+            name: "San pham 3", 
+            price: 1500, 
+            des: "Mo ta san pham" 
+        },
+        { 
+            imageURL: "IMG/phuongcongnguyen.jpg", 
+            name: "San pham 4", price: 50, 
+            des: "Mo ta san pham" },
+        { 
+            imageURL: "IMG/phuongcongnguyen.jpg", 
+            name: "San pham 4", 
+            price: 50, 
+            des: "Mo ta san pham" 
+        }
     ];
-
+    
+    this.body.style.margin = "0px"
     const listItemEl = document.getElementById('list-item');
     listItemEl.style.display = "flex";
     listItemEl.style.flexWrap = "wrap";
@@ -17,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     listItem.forEach(el => {
         const item = document.createElement('div');
         item.style.width = "260px";
-        item.style.margin = "10px";  
+        item.style.margin = "10px"; 
         item.style.border = "1px solid #eee";
         item.style.borderRadius = "10px";
         item.style.overflow = "hidden";
@@ -30,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const img = document.createElement('img');
         img.src = el.imageURL;
         img.style.width = "100%";
-        img.style.height = "240px"; 
+        img.style.height = "240px";
         img.style.objectFit = "cover";
 
         const name = document.createElement('p');
@@ -41,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         name.style.textAlign = "center";
 
         const price = document.createElement('p');
-        price.textContent = `${el.price} VND`;
+        price.textContent = `${el.price.toLocaleString()} VND`;  // Sử dụng toLocaleString() để thêm dấu phẩy
         price.style.padding = "10px";
         price.style.margin = "0";
         price.style.backgroundColor = "#f1f1f1";
@@ -49,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (el.price === 1500) {
             price.style.color = "red";
         }
+
 
         const buttonContainer = document.createElement('div');
         buttonContainer.style.display = "flex";
@@ -75,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.style.margin = "5px";
         button.style.padding = "10px";
         button.style.border = "none";
-        button.style.borderRadius = "5px"; 
+        button.style.borderRadius = "5px";
         button.style.cursor = "pointer";
         button.style.backgroundColor = bgColor;
         button.style.color = "white";
